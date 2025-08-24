@@ -22,7 +22,7 @@ function useDate() {
             setCurrentDateTime(new Date())
         }, 1000) // si aggiorna ogni secondo
 
-        return () => clearInterval(timer) // ferma la funzione quando il componente viene smontato e non viene più reindirizzato in pagina
+        return () => clearInterval(timer) // funzione di cleanup -> ferma la funzione quando il componente viene smontato e non viene più reindirizzato in pagina
 
     }, [])
 

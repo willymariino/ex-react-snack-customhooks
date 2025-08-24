@@ -10,7 +10,7 @@ Quando toggle() viene chiamato, il valore passa da true → false e viceversa.
 Esempio di utilizzo:
 
 import useSwitch from "./useSwitch";
-​
+
 function App() {
   const [isOn, toggle] = useSwitch();
 
@@ -22,7 +22,7 @@ function App() {
   );
 }
 
- export default App;
+export default App;
 
 
 */
@@ -31,13 +31,13 @@ import { useCallback, useState } from "react";
 
 function useSwitch(initialvalue = false) {
 
-    const [state, setState] = useState(initialvalue)
+  const [state, setState] = useState(initialvalue)
 
-    const toggle = useCallback(() => {
-        setState((prevState) => !prevState)
-    }, [])
+  const toggle = useCallback(() => {
+    setState((prevState) => !prevState)
+  }, [])
 
-    return [state, toggle]
+  return [state, toggle]
 
 
 
